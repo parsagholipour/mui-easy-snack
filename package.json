@@ -1,7 +1,7 @@
 {
   "name": "mui-easy-snack",
   "description": "One function call Snackbar provider for Material-UI(MUI)",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "type": "module",
   "main": "dist/mui-easy-snack.umd.js",
   "module": "dist/mui-easy-snack.es.js",
@@ -44,7 +44,8 @@
   ],
   "peerDependencies": {
     "@mui/material": "*",
-    "react": "*"
+    "react": ">=16.3.0",
+    "react-dom": ">=16.3.0"
   },
   "author": {
     "name": "Parsa Gholipour",

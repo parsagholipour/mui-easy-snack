@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import {SnackContext} from "./SnackContext.ts";
 import { SnackbarProps } from '@mui/material/Snackbar';
