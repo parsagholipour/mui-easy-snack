@@ -14,7 +14,7 @@ export const SnackProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const show = (message: React.ReactNode, options: SnackbarProps = {}) => {
     const key = keyCounter;
-    setSnacks([...snacks, { key, message, ...defaultOptions, ...options }]);
+    setSnacks([...snacks, { key, message, options: {...defaultOptions, ...options} }]);
     setKeyCounter(keyCounter + 1);
   };
 
