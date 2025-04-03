@@ -9,7 +9,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'mui-easy-snack',
       fileName: (format) => `mui-easy-snack.${format}.js`,
-      formats: ['es', 'umd']
+      formats: ['es', 'umd', 'cjs']
     },
     rollupOptions: {
       external: [
