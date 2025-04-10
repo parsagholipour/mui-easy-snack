@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
 import path from "path";
+import react from "@vitejs/plugin-react-swc";
 
-export default defineConfig({
-  plugins: [react()],
+export default defineConfig(({mode}) => ({
+  plugins: [mode === "development" ? react() : undefined],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
@@ -15,21 +15,10 @@ export default defineConfig({
       external: [
         'react',
         'react-dom',
-        '@mui/material',
-        '@mui/material/Snackbar',
-        '@mui/material/SnackbarContent',
-        '@emotion/react',
-        '@emotion/styled'
+        /@mui\/material/,
       ],
-      output: {
-        globals: {
-          'react': 'React',
-          'react-dom': 'ReactDOM',
-          '@mui/material': 'MuiMaterial'
-        }
-      }
     },
-    sourcemap: true,
-    minify: true
+    sourcemap: false,
+    minify: false
   }
-})
+}))

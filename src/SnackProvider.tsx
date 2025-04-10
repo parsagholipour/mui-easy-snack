@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Snackbar from '@mui/material/Snackbar';
-import {SnackContext} from "./SnackContext.ts";
+import {_SnackContext} from "./_SnackContext.ts";
 import { SnackbarProps } from '@mui/material/Snackbar';
 
 export const SnackProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -23,7 +23,7 @@ export const SnackProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   return (
-    <SnackContext.Provider value={{ show }}>
+    <_SnackContext.Provider value={{ show }}>
       {children}
       {snacks.map((snack) => (
         <Snackbar
@@ -34,6 +34,6 @@ export const SnackProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           {...snack.options}
         />
       ))}
-    </SnackContext.Provider>
+    </_SnackContext.Provider>
   );
 };
